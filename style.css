@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 :root {
-    --base: #7267C2;
+    /* --base: #7267C2; 
     --dark: #303465;
     --accent: #FF26B9;
-    --black: #010101;
-    --white: #ffffff;
+    --black: #010101; */
+    --base:  #FEF5DA;
+    --dark: #222222;
+    --lighter-dark: #3f3f3f;
+    --accent-blue: #3A668C;
+    --accent-brown: #BD7F22;
+    font-size: 17px;
 }
 body {
     background-color: var(--base);
@@ -15,6 +20,9 @@ body {
     justify-content: center;
     align-items: center;   
     line-height: 2;
+}
+h3{
+    margin-top: 0;
 }
 .headers {
     display: flex;
@@ -31,10 +39,71 @@ body {
 .searchBtn {
     padding: 8px 15px;
     margin-left: 5px;
-    background-color: var(--dark);
+    background-color: var(--accent-brown);
     color: var(--light);
-    border: 1px solid var(--accent);
+    border: 1px solid var(--accent-blue);
     font-size: 1rem;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px var(--accent); 
+    box-shadow: 1px 1px 1px var(--dark); 
+    cursor: pointer;
+}
+.searchBtn:hover{
+    color: var(--base);
+    box-shadow: 1px 2px 1px var(--dark); 
+}
+
+/* results headers */
+.results-headers {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 25%;
+    /* border-bottom: 1.5px solid var(--dark); */
+}
+.results-headers #word .word {
+    font-size: 1.5rem;
+    font-weight: bold;  
+}
+.phonetics {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: normal;
+    padding-left: 5px;
+    color: var(--accent-blue);
+}
+button.audio{
+    background-color: var(--accent-brown);
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;   
+    box-shadow: 2px 2px 1px var(--dark); 
+    color: var(--dark)
+}
+button.audio:hover{
+    box-shadow: 1px 1px 1px var(--dark); 
+    color: var(--base);
+}
+ol li {
+    list-style-type: upper-roman;
+    margin-bottom: 2%;
+    
+}
+.partOfSpeech{
+    font-style: italic;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: var(--accent-blue);
+}
+p.example{
+    font-style: italic;
+    padding-left: 3rem;
+    border-left: 1px solid var(--accent-brown);
+    color: var(--lighter-dark);
+}
+.hidden {
+    display: none;
 }

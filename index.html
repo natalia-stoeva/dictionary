@@ -5,26 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Dictionary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <H1>Dictionary</H1>
+    <h1>Dictionary</h1>
+    <h3>Search for word</h3>
 
     <div class="headers" id="headers">
         <input type="text" class="inputField" id="inputField">
         <button type="submit" class="searchBtn" id="searchBtn">Search</button>
     </div>
 
-    <div class="results" id="word">
+    <div class="results-headers">
+        <div id="word">
+        </div>
+        <div class="sound" >
+            <audio id="sound"></audio>
+            <button class="audio hidden" title="play sound" id="audioBtn"><i class="fa-solid fa-volume-high fa-sm"></i></button>
+        </div> 
+    </div>   
 
+    <div class="results">
+        <ol id="results"></ol>
+        <p class="example" id="example"></p>
     </div>
-
-    <div class="results" id="results">
-
-    </div>
-
-
+    
+    <script src="helpers.js"></script>
     <script src="app.js"></script>
+    
     
 </body>
 </html>
