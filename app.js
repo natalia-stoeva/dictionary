@@ -1,3 +1,4 @@
+const displayError = document.getElementById('results-outer')
 const getDefinitions = async () => {
     let urlToFetch = `https://api.dictionaryapi.dev/api/v2/entries/en/${input.value}`;
     try {
@@ -6,12 +7,13 @@ const getDefinitions = async () => {
             const jsonResponse = await response.json()
             console.log(jsonResponse)
             renderData(jsonResponse);           
-        }
-
-    } catch(errors){
+        } else {
+            const jsonResponse = await response.json()
+            renderNoResults(jsonResponse)
+            console.log(jsonResponse.title)           
+        }       
+    } catch(errors){       
         console.log(errors)
-        // resultsDiv.innerHTML = `<p>Sorry, nothing found </p>`
     }
-
 }
 searchBtn.addEventListener('click', getDefinitions)

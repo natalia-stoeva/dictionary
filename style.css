@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 :root {
-    /* --base: #7267C2; 
-    --dark: #303465;
-    --accent: #FF26B9;
-    --black: #010101; */
     --base:  #FEF5DA;
     --dark: #222222;
     --lighter-dark: #3f3f3f;
@@ -89,8 +85,7 @@ button.audio:hover{
 }
 ol li {
     list-style-type: upper-roman;
-    margin-bottom: 2%;
-    
+    margin-bottom: 2%;    
 }
 .partOfSpeech{
     font-style: italic;
@@ -103,6 +98,11 @@ p.example{
     padding-left: 3rem;
     border-left: 1px solid var(--accent-brown);
     color: var(--lighter-dark);
+}
+p.error{
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    font-weight: bold;
 }
 .hidden {
     display: none;
